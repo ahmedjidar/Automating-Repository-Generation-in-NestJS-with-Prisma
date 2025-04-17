@@ -1,11 +1,3 @@
----
-title: 'Automating Repository Generation in NestJS with Prisma'
-date: '2025-04-04'
-excerpt: 'Learn how to dynamically generate repository classes with transaction handling based on your Prisma schema.'
-coverImage: '/images/blog/repository-generation-nestjs.jpg'
-tags: ['NestJS', 'Prisma', 'TypeScript', 'Automation']
----
-
 # Automating Repository Generation in NestJS with Prisma
 
 In a NestJS or any other backend applications, repository classes act as the data access layer. Managing repositories in a Prisma + NestJS application can get tedious, especially when dealing with multiple models. Manually creating repository files for each model is inefficient and prone to errors. Instead of writing the same CRUD methods for every model, this article will guide you way to dynamically generate repository classes with transaction handling based on the Prisma schema. This approach not only reduces boilerplate code but also ensures consistency across your application.
