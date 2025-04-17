@@ -18,8 +18,6 @@ In a NestJS or any other backend application, repository classes act as the data
 10. [Comparison: Manual vs. Automated](#comparison-manual-vs-automated)  
 11. [Conclusion](#conclusion)  
 
----
-
 ## Working Mechanism
 
 Example Prisma schema file (`schema.prisma`) has a `Country` model which will act as our running example:
@@ -45,8 +43,6 @@ model Country {
 ```
 
 > 🚀 **Tip:** Use `prisma db pull` to introspect an existing database into your Prisma schema.
-
----
 
 ## Creating the Base Repository
 
@@ -94,8 +90,6 @@ export class BaseRepository<T> {
 }
 ```
 
----
-
 ## Repository Factory
 
 ```typescript
@@ -113,8 +107,6 @@ export class RepositoryFactory {
   }
 }
 ```
-
----
 
 ## Using the Generated Repositories
 
@@ -144,8 +136,6 @@ export class CountryService {
 }
 ```
 
----
-
 ## Advanced: Type‑Safe Repositories
 
 ```typescript
@@ -171,8 +161,6 @@ export class RepositoryFactory {
   }
 }
 ```
-
----
 
 ## CLI Automation for Repo Generation
 
@@ -206,8 +194,6 @@ main().catch(console.error);
 - **Run**: `ts-node scripts/generate-repos.ts`  
 - **Output**: Generates one file per model under `src/generated/`.
 
----
-
 ## Generating Repositories with Decorators
 
 ```typescript
@@ -229,8 +215,6 @@ export class CountryRepository {}
 ```
 
 > ℹ️ **Note:** You can read `Reflect.getMetadata('prisma:model', CountryRepository)` in a factory to register it automatically.
-
----
 
 ## Testing the Generated Repositories
 
@@ -266,8 +250,6 @@ describe('BaseRepository', () => {
 });
 ```
 
----
-
 ## Best Practices & Patterns
 
 - **DRY principle:** Keep your base repository logic in one place.  
@@ -275,8 +257,6 @@ describe('BaseRepository', () => {
 - **Model metadata:** Use decorators or metadata for automated registration.  
 - **CI Integration:** Add your CLI script to CI pipelines to regenerate as schema changes.  
 - **Documentation:** Keep a README section updated with usage examples.
-
----
 
 ## Comparison: Manual vs. Automated
 
@@ -287,8 +267,6 @@ describe('BaseRepository', () => {
 | Type Safety                 | Medium              | Strong               |
 | Transaction Handling        | Manual              | Built‑in             |
 | Maintenance Overhead        | High                | Minimal              |
-
----
 
 ## Conclusion
 
