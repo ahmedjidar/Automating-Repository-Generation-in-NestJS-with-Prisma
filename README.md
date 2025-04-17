@@ -300,4 +300,4 @@ By dynamically generating repository classes based on your Prisma schema and lev
 4. **Easily integrate** with your CI/CD and testing pipelines.  
 
 This pattern works not just for NestJS but for any TypeScript backend using Prisma as the ORM. Happy coding!    
-```
+
