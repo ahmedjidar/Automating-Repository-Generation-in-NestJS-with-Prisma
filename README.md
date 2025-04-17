@@ -268,7 +268,7 @@ describe('BaseRepository', () => {
 | Transaction Handling        | Manual              | Built‑in             |
 | Maintenance Overhead        | High                | Minimal              |
 
-## Conclusion
+## [Conclusion](#conclusion)
 
 By dynamically generating repository classes based on your Prisma schema and leveraging decorators, CLI scripts, and type‑safe factories, you can:
 
